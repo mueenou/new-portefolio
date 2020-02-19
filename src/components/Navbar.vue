@@ -1,5 +1,6 @@
 <template>
     <div id="navbar" :class="{ 'navbar-scroll': scroll }">
+        <img id="logo-img" src="../assets/images/LOGO_Mueen.png" alt="logo" width="150px">
         <ul>
             <li @click="activeLink">
                 <a href="#landing">Home</a>
@@ -55,8 +56,8 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Squada+One&display=swap');
 #navbar {
-    height: 80px;
-    margin-bottom: 5rem;
+    line-height: 80px;
+    height: 100px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -85,7 +86,7 @@ ul li a {
     color: rgb(158, 158, 158);
     font-size: 20px;
     letter-spacing: 4px;
-    line-height: 80px;
+    line-height: 100px;
     transition: 0.5s;
 }
 
