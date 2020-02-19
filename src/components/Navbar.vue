@@ -54,6 +54,7 @@ export default {
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Passion+One&display=swap');
 #navbar {
     height: 80px;
     margin-bottom: 5rem;
@@ -62,7 +63,7 @@ export default {
     width: 100%;
     max-width: 100%;
     transition: 0.7s;
-    font-family: 'Squada One', cursive;
+    font-family: 'Passion One', cursive;
 }
 
 .navbar-scroll {
@@ -84,7 +85,7 @@ ul li {
 ul li a {
     color: rgb(158, 158, 158);
     font-size: 20px;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     line-height: 80px;
     transition: 0.5s;
 }
@@ -94,6 +95,6 @@ ul li a:hover {
 }
 
 .active {
-    color: black;
+    color: rgb(29, 29, 29);
 }
 </style>
