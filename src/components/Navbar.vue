@@ -1,9 +1,8 @@
 <template>
-  <div>
+  <div id="myNavbar" class="topnav">
       <a href="#landing">
-        <img id="logo-img" src="../assets/images/LOGO_Mueen.png" alt="logo" width="150px" />
+        <img id="logo-img" src="../assets/images/LOGO_Mueen.png" alt="logo" width="100px" />
       </a>
-    <div id="myNavbar" class="topnav" :class="{ 'topnav-scroll': scroll }">
       <a href="#landing" @click="activeLink">Home</a>
       <a href="#about" @click="activeLink">About</a>
       <a href="#skills" @click="activeLink">Skills</a>
@@ -57,7 +56,6 @@
         </svg>
       </a>
     </div>
-  </div>
 </template>
 <script>
 export default {
@@ -65,20 +63,28 @@ export default {
   data() {
     return {
       scroll: false,
-      x: document.getElementsByClassName("topnav")
+      x: document.getElementsByClassName("topnav"),
     };
   },
   methods: {
     handleScroll() {
       var scroll = window.pageYOffset;
-      if (scroll >= 200) {
-        this.scroll = true;
-      } else {
-        this.scroll = false;
+      console.log(scroll);
+      if (window.innerWidth > 752) {
+        if (scroll >= 200) {
+          this.x[0].classList.add("topnav-scroll");
+        } else {
+          this.x[0].classList.remove("topnav-scroll");
+        }
       }
     },
     activeLink(e) {
       console.log(e.target.parentNode.children);
+      if(this.x[0].className === "topnav responsive") {
+        this.x[0].classList.remove('responsive');
+      } else {
+        this.x[0].className = "topnav topnav-scroll";
+      }
       e.target.parentNode.children.forEach(node => {
         node.classList.remove("active");
       });
@@ -88,8 +94,13 @@ export default {
       console.log(this.x[0]);
       if (this.x[0].className === "topnav") {
         this.x[0].className += " responsive";
+        this.isAbsoluteLogo = false;
+      } else if(this.x[0].className === "topnav" || this.x[0].className === "topnav topnav-scroll") {
+        this.x[0].className = "topnav .responsive";
+        this.isAbsoluteLogo = false;
       } else {
         this.x[0].className = "topnav";
+        this.isAbsoluteLogo = true;
       }
     }
   },
@@ -107,29 +118,31 @@ export default {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
+  max-height: 80px;
   transition: 0.7s;
   position: fixed;
   top: 0;
   font-family: "Squada One", cursive;
 }
 
-img {
-    position: fixed;
-    right: 10px;
-    top: -5px;
-    z-index: 9999;
+#logo-img {
+  padding: 0px !important;
 }
 
 .topnav a {
   float: left;
   display: block;
   color: rgb(158, 158, 158);
-  font-size: 20px;
+  font-size: 16px;
   padding: 30px 0;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   transition: 0.5s;
   margin: 0 20px;
   text-align: center;
+}
+
+.topnav a:first-child {
+  padding-top: 10px;
 }
 .topnav-scroll {
   box-shadow: 0px 0px 10px rgb(192, 192, 192);
@@ -137,11 +150,11 @@ img {
 }
 
 .topnav a:hover {
-  color: #3d3d3d;
+  color: #5d5c5c;
 }
 
 .topnav a.active {
-  color: black;
+  color: rgb(51, 50, 50);
 }
 
 .topnav .icon {
@@ -159,18 +172,26 @@ svg:hover {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 752px) {
-    .topnav {
-        position: unset;
-    }
+  .topnav {
+    background-color: #ffffff;
+    max-height: none;
+    box-shadow: 0px 0px 10px rgb(192, 192, 192);
+  }
   .topnav a {
     display: none;
   }
+  .topnav a:first-child {
+    padding-top: 10px;
+    margin-left: -5px;
+    padding-bottom: 0px;
+  }
   .topnav a.icon {
-    float: left;
+    float: right;
     display: block;
   }
   .topnav.responsive {
-    position: relative;
+    position: fixed;
+    top: 0;
   }
   .topnav.responsive a.icon {
     position: absolute;
