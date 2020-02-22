@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar style="display: none;"/>
+    <Navbar/>
     <Home />
   </div>
 </template>
