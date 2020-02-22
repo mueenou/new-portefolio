@@ -1,8 +1,5 @@
 <template>
   <div id="myNavbar" class="topnav">
-    <a href="#landing">
-      <img id="logo-img" src="../assets/images/LOGO_Mueen.png" alt="logo" width="150px" />
-    </a>
     <a href="#landing" @click="activeLink">Home</a>
     <a href="#about" @click="activeLink">About</a>
     <a href="#skills" @click="activeLink">Skills</a>
@@ -94,16 +91,13 @@ export default {
       console.log(this.x[0]);
       if (this.x[0].className === "topnav") {
         this.x[0].className += " responsive";
-        this.isAbsoluteLogo = false;
       } else if (
         this.x[0].className === "topnav" ||
         this.x[0].className === "topnav topnav-scroll"
       ) {
         this.x[0].className = "topnav .responsive";
-        this.isAbsoluteLogo = false;
       } else {
         this.x[0].className = "topnav";
-        this.isAbsoluteLogo = true;
       }
     }
   },
@@ -130,27 +124,19 @@ export default {
   opacity: 0.98;
 }
 
-#logo-img {
-  margin-top: -15px;
-  padding: 0px !important;
-}
-
 .topnav a {
   float: left;
   display: block;
   color: rgb(158, 158, 158);
-  font-size: 16px;
+  font-size: 12px;
   padding: 30px 0;
   transition: 0.5s;
   margin: 0 20px;
   text-align: center;
 }
 
-.topnav a:first-child {
-  padding-top: 10px;
-}
 .topnav-scroll {
-  box-shadow: 0px 0px 10px rgb(192, 192, 192);
+  box-shadow: 0px 0px 2px rgb(192, 192, 192);
   background-color: #ffffff;
 }
 
@@ -185,16 +171,13 @@ svg:hover {
   .topnav a {
     display: none;
   }
-  .topnav a:first-child {
-    padding-top: 10px;
-    margin-left: -5px;
-    padding-bottom: 0px;
-  }
+
   .topnav a.icon {
-    float: right;
     display: block;
   }
   .topnav.responsive {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
   }
