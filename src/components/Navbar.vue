@@ -112,6 +112,8 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Krona+One&display=swap");
 .topnav {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   width: 100%;
   max-width: 100%;
@@ -131,7 +133,7 @@ export default {
   font-size: 12px;
   padding: 30px 0;
   transition: 0.5s;
-  margin: 0 20px;
+  margin: 0 40px;
   text-align: center;
 }
 
