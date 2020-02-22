@@ -1,7 +1,12 @@
 <template>
   <div id="landing" class="wrapper">
-    <img src="../assets/images/LOGO_Mueen.png" alt="landing-main-logo" width="600px" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out">
-    <h1>Front End Developper, UX/UI Designer, Javascript Freak</h1>
+    <div class="landing-logo-title">
+        <img src="../assets/images/LOGO_Mueen.png" alt="landing-main-logo" width="400px" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">Front End Developper, UX/UI Designer, Javascript Freak</h1>
+    </div>
+    <span data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+     >" Trop de compétences cause la précipitation mais une bonne équipe propose la meilleure solution "</span> 
+    <p class="landing-introduction" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">Passionné par l'art depuis l'enfance, j'adore admirer la beauté artistique et la créativité. J'ai découvert et pris goût du développement front end davantage malgrès mes connaissances full stack. Je vous propose aujourd'hui mes compétences sur ce domaine, sur la gestion de projet mais surtout ma bonne humeur. Je vous laisse me découvrir, bonne visite !</p>
     <p class="bounce"><i class="arrow down"></i></p>
   </div>
 </template>
@@ -43,13 +48,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1230px !important;
   width: 100%;
   height: auto;
   min-height: 100vh;
-  padding: 50px 20px;
-  padding-top: 100px;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -60,6 +64,22 @@ a:hover {
   }
 }
 
+.landing-logo-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.landing-introduction {
+    max-width: 750px;
+    width: 100%;
+    line-height: 25px;
+}
+span {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 h1 {
   font-weight: bold;
   align-items: center;
@@ -67,7 +87,7 @@ h1 {
   margin: 0 auto;
   color: rgb(75, 65, 68);
 }
-p {
+.bounce {
   position: absolute;
   bottom: 30px;
 }
