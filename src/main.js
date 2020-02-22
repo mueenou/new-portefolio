@@ -25,7 +25,9 @@ const router = new VueRouter({
 
 new Vue({
   created() {
-    AOS.init(); 
+    AOS.init({
+      once: false,
+    }); 
   },
   router,
   render: h => h(App),
