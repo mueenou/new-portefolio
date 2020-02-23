@@ -1,9 +1,7 @@
 <template>
   <div id="landing" class="wrapper">
-    <div class="landing-logo-title">
-        <img src="../assets/images/LOGO_Mueen.png" alt="landing-main-logo" width="400px" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <img src="../assets/images/LOGO_Mueen.png" alt="landing-main-logo" width="300px" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">Front End Developper, UX/UI Designer, Javascript Freak</h1>
-    </div>
     <span data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
      >" Trop de compétences cause la précipitation mais une bonne équipe propose la meilleure solution "</span> 
     <p class="landing-introduction" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">Passionné par l'art depuis l'enfance, j'adore admirer la beauté artistique et la créativité. J'ai découvert et pris goût du développement front end davantage malgrès mes connaissances full stack. Je vous propose aujourd'hui mes compétences sur ce domaine, sur la gestion de projet mais surtout ma bonne humeur. Je vous laisse me découvrir, bonne visite !</p>
@@ -74,6 +72,7 @@ a:hover {
     max-width: 750px;
     width: 100%;
     line-height: 25px;
+    text-align: justify;
 }
 span {
     font-style: italic;
@@ -83,8 +82,9 @@ span {
 h1 {
   font-weight: bold;
   align-items: center;
-  font-size: 35px;
+  font-size: 28px;
   margin: 0 auto;
+  margin-bottom: 30px;
   color: rgb(75, 65, 68);
 }
 .bounce {
