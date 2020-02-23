@@ -1,10 +1,10 @@
 <template>
   <div id="myNavbar" class="topnav">
-    <a href="#landing" @click="activeLink">Home</a>
-    <a href="#about" @click="activeLink">About</a>
-    <a href="#skills" @click="activeLink">Skills</a>
-    <a href="#projects" @click="activeLink">Projects</a>
-    <a href="#contact" @click="activeLink">Contact</a>
+    <a href="#landing" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Home</a>
+    <a href="#about" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">About</a>
+    <a href="#skills" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Skills</a>
+    <a href="#projects" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Projects</a>
+    <a href="#contact" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Contact</a>
     <a href="javascript:void(0);" class="icon" @click="myFunction()">
       <svg
         version="1.1"
