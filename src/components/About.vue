@@ -48,7 +48,7 @@
             </a>
 
             <a
-              href="https://www.instagram.com/iamuhammederdem"
+              href="#"
               class="profile-card-social__item instagram"
               target="_blank"
             >
@@ -96,7 +96,7 @@
       </div>
     </div>
 
-    <svg hidden="hidden">
+    <svg class="about-social-logo-loader">
       <defs>
         <symbol id="icon-codepen" viewBox="0 0 32 32">
           <title>codepen</title>
@@ -231,7 +231,6 @@ a:hover {
 
 .wrapper {
   font-family: "Squada One", cursive;
-  width: 100%;
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -585,5 +584,9 @@ a:hover {
   background: rgba(22, 33, 72, 0.35);
   border-radius: 12px;
   transition: all 0.3s;
+}
+
+.about-social-logo-loader {
+  display: none;
 }
 </style>

@@ -27,7 +27,6 @@ const router = new VueRouter({
 new Vue({
   created() {
     AOS.init({
-      once: false,
     }); 
   },
   router,
