@@ -1,6 +1,6 @@
 <template>
   <div id="landing" class="wrapper">
-        <img src="../assets/images/LOGO_Mueen.png" alt="landing-main-logo" width="300px" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <img src="../assets/images/LOGO_Mueen.png" alt="landing-main-logo" width="600px" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
         <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">Front End Developper, UX/UI Designer, Javascript Freak</h1>
     <span data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
      >" Trop de compétences cause la précipitation mais une bonne équipe propose la meilleure solution "</span> 
