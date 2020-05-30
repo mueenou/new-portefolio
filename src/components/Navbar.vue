@@ -1,61 +1,58 @@
 <template>
   <div id="myNavbar" class="topnav">
-      <a href="#landing">
-        <img id="logo-img" src="../assets/images/LOGO_Mueen.png" alt="logo" width="100px" />
-      </a>
-      <a href="#landing" @click="activeLink">Home</a>
-      <a href="#about" @click="activeLink">About</a>
-      <a href="#skills" @click="activeLink">Skills</a>
-      <a href="#projects" @click="activeLink">Projects</a>
-      <a href="#contact" @click="activeLink">Contact</a>
-      <a href="javascript:void(0);" class="icon" @click="myFunction()">
-        <svg
-          version="1.1"
-          id="Capa_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 0 469.333 469.333"
-          style="enable-background:new 0 0 469.333 469.333;"
-          xml:space="preserve"
-        >
+    <a href="#landing" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Home</a>
+    <a href="#about" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">About</a>
+    <a href="#skills" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Skills</a>
+    <a href="#projects" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Projects</a>
+    <a href="#contact" @click="activeLink" v-smooth-scroll="{duration: 1000, offset: -50}">Contact</a>
+    <a href="javascript:void(0);" class="icon" @click="myFunction()">
+      <svg
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 469.333 469.333"
+        style="enable-background:new 0 0 469.333 469.333;"
+        xml:space="preserve"
+      >
+        <g>
           <g>
             <g>
-              <g>
-                <path
-                  d="M53.333,106.667H416c29.417,0,53.333-23.927,53.333-53.333S445.417,0,416,0H53.333C23.917,0,0,23.927,0,53.333
+              <path
+                d="M53.333,106.667H416c29.417,0,53.333-23.927,53.333-53.333S445.417,0,416,0H53.333C23.917,0,0,23.927,0,53.333
 				S23.917,106.667,53.333,106.667z"
-                />
-                <path
-                  d="M416,181.333H53.333C23.917,181.333,0,205.26,0,234.667S23.917,288,53.333,288H416c29.417,0,53.333-23.927,53.333-53.333
+              />
+              <path
+                d="M416,181.333H53.333C23.917,181.333,0,205.26,0,234.667S23.917,288,53.333,288H416c29.417,0,53.333-23.927,53.333-53.333
 				S445.417,181.333,416,181.333z"
-                />
-                <path
-                  d="M416,362.667H53.333C23.917,362.667,0,386.594,0,416s23.917,53.333,53.333,53.333H416
+              />
+              <path
+                d="M416,362.667H53.333C23.917,362.667,0,386.594,0,416s23.917,53.333,53.333,53.333H416
 				c29.417,0,53.333-23.927,53.333-53.333S445.417,362.667,416,362.667z"
-                />
-              </g>
+              />
             </g>
           </g>
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-          <g />
-        </svg>
-      </a>
-    </div>
+        </g>
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+        <g />
+      </svg>
+    </a>
+  </div>
 </template>
 <script>
 export default {
@@ -63,7 +60,7 @@ export default {
   data() {
     return {
       scroll: false,
-      x: document.getElementsByClassName("topnav"),
+      x: document.getElementsByClassName("topnav")
     };
   },
   methods: {
@@ -80,8 +77,8 @@ export default {
     },
     activeLink(e) {
       console.log(e.target.parentNode.children);
-      if(this.x[0].className === "topnav responsive") {
-        this.x[0].classList.remove('responsive');
+      if (this.x[0].className === "topnav responsive") {
+        this.x[0].classList.remove("responsive");
       } else {
         this.x[0].className = "topnav topnav-scroll";
       }
@@ -94,13 +91,13 @@ export default {
       console.log(this.x[0]);
       if (this.x[0].className === "topnav") {
         this.x[0].className += " responsive";
-        this.isAbsoluteLogo = false;
-      } else if(this.x[0].className === "topnav" || this.x[0].className === "topnav topnav-scroll") {
+      } else if (
+        this.x[0].className === "topnav" ||
+        this.x[0].className === "topnav topnav-scroll"
+      ) {
         this.x[0].className = "topnav .responsive";
-        this.isAbsoluteLogo = false;
       } else {
         this.x[0].className = "topnav";
-        this.isAbsoluteLogo = true;
       }
     }
   },
@@ -113,8 +110,10 @@ export default {
 };
 </script>
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Krona+One&display=swap");
 .topnav {
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   width: 100%;
   max-width: 100%;
@@ -122,31 +121,25 @@ export default {
   transition: 0.7s;
   position: fixed;
   top: 0;
-  font-family: "Squada One", cursive;
-}
-
-#logo-img {
-  padding: 0px !important;
+  z-index: 9999;
+  font-family: "Krona One", cursive;
+  opacity: 0.98;
 }
 
 .topnav a {
   float: left;
   display: block;
   color: rgb(158, 158, 158);
-  font-size: 16px;
+  font-size: 12px;
   padding: 30px 0;
-  letter-spacing: 2px;
   transition: 0.5s;
-  margin: 0 20px;
+  margin: 0 40px;
   text-align: center;
 }
 
-.topnav a:first-child {
-  padding-top: 10px;
-}
 .topnav-scroll {
-  box-shadow: 0px 0px 10px rgb(192, 192, 192);
-  background-color: white;
+  box-shadow: 0px 0px 2px rgb(192, 192, 192);
+  background-color: #ffffff;
 }
 
 .topnav a:hover {
@@ -180,16 +173,13 @@ svg:hover {
   .topnav a {
     display: none;
   }
-  .topnav a:first-child {
-    padding-top: 10px;
-    margin-left: -5px;
-    padding-bottom: 0px;
-  }
+
   .topnav a.icon {
-    float: right;
     display: block;
   }
   .topnav.responsive {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
   }
