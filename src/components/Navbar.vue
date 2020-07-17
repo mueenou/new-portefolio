@@ -66,7 +66,6 @@ export default {
   methods: {
     handleScroll() {
       var scroll = window.pageYOffset;
-      console.log(scroll);
       if (window.innerWidth > 752) {
         if (scroll >= 200) {
           this.x[0].classList.add("topnav-scroll");
@@ -88,7 +87,6 @@ export default {
       e.target.classList.add("active");
     },
     myFunction() {
-      console.log(this.x[0]);
       if (this.x[0].className === "topnav") {
         this.x[0].className += " responsive";
       } else if (

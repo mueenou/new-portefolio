@@ -201,7 +201,9 @@ export default {
 </script>
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
-
+#about {
+  padding: 30px 0;
+}
 html {
   position: relative;
   overflow-x: hidden !important;
